@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Translator</title> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head> 
+<body class="text-center container"> 
+	<div class="col-md-6">
+		<form method="post" class="mt-4"> 
+			<h3>Text Translator</h3>
+			{% csrf_token %} 
+			<input placeholder="Type here to translate..." type="text" name="translate" class="form-control" required> 
+			<br> 
+			<select required name="language" class="form-control"> 
+				<option value="">--select language--</option>
+				<option value="Hindi">Hindi</option> 
+				<option value="Marathi">Marathi</option> 
+				<option value="German">German</option> 
+			</select> 
+			<br> 
+			<button type="submit" class="btn btn-primary">Translate</button> 
+		</form> 
+		</div>
+</body> 
+</html> 
